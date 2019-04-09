@@ -1,0 +1,5 @@
+.TAHttpSourceTemp/
+.metadata/
+.recommenders/
+HTTPSourceCode.log
+RemoteSystemsTempFiles/
