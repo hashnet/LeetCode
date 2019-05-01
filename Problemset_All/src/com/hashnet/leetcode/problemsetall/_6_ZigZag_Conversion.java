@@ -2,10 +2,11 @@ package com.hashnet.leetcode.problemsetall;
 
 public class _6_ZigZag_Conversion {
 	public String convert(String s, int numRows) {
-        if(numRows == 1) return s;
-        
-        int pos;
+		if(numRows == 1) return s;
+		
+		int pos;
 		StringBuilder[] sb = new StringBuilder[numRows];
+		
 		for(int i=0; i<numRows; i++) {
 			sb[i] = new StringBuilder();
 		}
@@ -22,7 +23,7 @@ public class _6_ZigZag_Conversion {
 			result.append(sb[i]);
 		}
 		return result.toString();
-    }
+	}
 	
 	public static void main(String[] args) {
 		_6_ZigZag_Conversion solution = new _6_ZigZag_Conversion();
