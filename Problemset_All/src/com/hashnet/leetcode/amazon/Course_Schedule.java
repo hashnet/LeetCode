@@ -78,7 +78,7 @@ public class Course_Schedule {
 			g.addEdge(prerequisites[i][1], prerequisites[i][0]);
 		}
 		
-		return g.isCyclic();
+		return !g.isCyclic();
 	}
 
 	public static void main(String[] args) {

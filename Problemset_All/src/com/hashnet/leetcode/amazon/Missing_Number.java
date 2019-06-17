@@ -1,7 +1,5 @@
 package com.hashnet.leetcode.amazon;
 
-import java.util.Arrays;
-
 import com.hashnet.leetcode.utility.ArrayUtility;
 
 public class Missing_Number {

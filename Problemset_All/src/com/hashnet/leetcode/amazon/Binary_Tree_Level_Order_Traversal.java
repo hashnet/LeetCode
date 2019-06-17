@@ -8,7 +8,7 @@ import java.util.Queue;
 import com.hashnet.leetcode.utility.TreeNode;
 
 public class Binary_Tree_Level_Order_Traversal {
-    public List<List<Integer>> levelOrder(TreeNode root) {
+	public List<List<Integer>> levelOrder(TreeNode root) {
 		Queue<TreeNode> treeQ = new LinkedList<>();
 		Queue<Integer> indexQ = new LinkedList<>();
 
