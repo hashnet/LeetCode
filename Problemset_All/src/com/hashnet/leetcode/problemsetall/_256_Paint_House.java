@@ -1,4 +1,4 @@
-package com.hashnet.leetcode.amazon;
+package com.hashnet.leetcode.problemsetall;
 
 public class _256_Paint_House {
     public int minCost(int[][] costs) {

@@ -1,3 +1,4 @@
+package com.hashnet.leetcode.amazon;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
