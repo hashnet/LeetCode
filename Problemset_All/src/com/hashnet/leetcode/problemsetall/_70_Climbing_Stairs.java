@@ -1,4 +1,4 @@
-package com.hashnet.leetcode.amazon;
+package com.hashnet.leetcode.problemsetall;
 
 public class _70_Climbing_Stairs {
     public int climbStairs(int n) {

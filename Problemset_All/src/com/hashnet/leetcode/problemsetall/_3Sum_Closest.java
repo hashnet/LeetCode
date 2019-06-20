@@ -1,4 +1,4 @@
-package com.hashnet.leetcode.amazon;
+package com.hashnet.leetcode.problemsetall;
 
 import java.util.Arrays;
 
