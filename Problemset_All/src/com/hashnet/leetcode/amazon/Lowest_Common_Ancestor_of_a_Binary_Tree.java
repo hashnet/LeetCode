@@ -29,12 +29,16 @@ public class Lowest_Common_Ancestor_of_a_Binary_Tree {
     }
 	
 	private boolean traverse(TreeNode node, TreeNode needle, Deque<TreeNode> stack) {
-		if(needle == node) return true;
+		if(needle == node) {
+			stack.push(node);
+			return true;
+		}
 		else if(node.left != null && traverse(node.left, needle, stack)) {
 			stack.push(node);
 			return true;
 		} else if(node.right != null && traverse(node.right, needle, stack)) {
 			stack.push(node);
+			return true;
 		}
 		
 		return false;
