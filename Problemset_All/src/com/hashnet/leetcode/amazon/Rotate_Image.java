@@ -48,8 +48,8 @@ public class Rotate_Image {
 		                  {16, 7,10,11}
 		                 };
 		
-		System.out.println("Original Matrix: \n" + ArrayUtility.Int2DArrayToString((matrix)));
+		System.out.println("Original Matrix: \n" + ArrayUtility.int2DArrayToString((matrix)));
 		solution.rotate(matrix);
-		System.out.println("Rotated Matrix: \n" + ArrayUtility.Int2DArrayToString((matrix)));
+		System.out.println("Rotated Matrix: \n" + ArrayUtility.int2DArrayToString((matrix)));
 	}
 }

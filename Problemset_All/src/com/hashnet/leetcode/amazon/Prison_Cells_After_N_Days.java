@@ -73,9 +73,9 @@ public class Prison_Cells_After_N_Days {
 	public static void main(String[] args) {
 		Prison_Cells_After_N_Days solution = new Prison_Cells_After_N_Days();
 		
-		//System.out.println(ArrayUtility.Int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(0, 1, 1, 0), 7)));
-		//System.out.println(ArrayUtility.Int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(0, 0, 1), 7)));
-		//System.out.println(ArrayUtility.Int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(0,1,0,1,1,0,0,1), 7)));
-		System.out.println(ArrayUtility.Int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(1,0,0,1,0,0,1,0), 1000000000)));
+		//System.out.println(ArrayUtility.int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(0, 1, 1, 0), 7)));
+		//System.out.println(ArrayUtility.int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(0, 0, 1), 7)));
+		//System.out.println(ArrayUtility.int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(0,1,0,1,1,0,0,1), 7)));
+		System.out.println(ArrayUtility.int1DArrayToString(solution.prisonAfterNDays(ArrayUtility.toIntArray(1,0,0,1,0,0,1,0), 1000000000)));
 	}
 }

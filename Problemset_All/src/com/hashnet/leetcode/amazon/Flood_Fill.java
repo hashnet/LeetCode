@@ -32,6 +32,6 @@ public class Flood_Fill {
 				{1, 0, 1}
 		};
 		
-		System.out.println(ArrayUtility.Int2DArrayToString(solution.floodFill(image, 1, 1, 2)));
+		System.out.println(ArrayUtility.int2DArrayToString(solution.floodFill(image, 1, 1, 2)));
 	}
 }
