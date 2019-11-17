@@ -37,10 +37,8 @@ public class _1048_Longest_String_Chain {
 	    	System.out.println(Arrays.toString(words));
 	    	System.out.println(adjList);
 	    	
-	    	int rootLen = words[0].length();
 	    	for(int i=0; i<words.length; i++) {
-	    		if(words[i].length() == rootLen) recurs(adjList, words, i, 1);
-	    		else break;
+	    		recurs(adjList, words, i, 1);
 	    	}
 	    	
 	    	return max;
