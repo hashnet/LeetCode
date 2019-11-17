@@ -18,12 +18,18 @@ public class _1130_Minimum_Cost_Tree_From_Leaf_Values {
                 int j = i+k;
                 
                 max[i][j] = Math.max(max[i][j-1], max[i+1][j]);
-                sum[i][j] = Math.min(sum[i][j-1] + (max[i][j-1] * arr[j]), sum[i+1][j] + (max[i+1][j] * arr[i]));
+                
+                int min = Integer.MAX_VALUE;
+                for(int y=i,x=i+1; y<j; y++,x++) {
+                	int localSum = sum[i][y] + sum[x][j] + (max[i][y] * max[x][j]);
+                	if(localSum < min) min = localSum;
+                }
+                sum[i][j] = min;
             }
         }
         
-        System.out.println(ArrayUtility.int2DArrayToString(max));
-        System.out.println(ArrayUtility.int2DArrayToString(sum));
+        //System.out.println(ArrayUtility.int2DArrayToString(max));
+        //System.out.println(ArrayUtility.int2DArrayToString(sum));
         
         return sum[0][n-1];
     }
