@@ -1,3 +1,4 @@
+package com.hashnet.leetcode.problemsetall;
 import com.hashnet.leetcode.utility.ArrayUtility;
 
 public class _1027_Longest_Arithmetic_Sequence {
