@@ -1,7 +1,10 @@
 package com.hashnet.leetcode.utility;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArrayUtility {
 	public static int[] toIntArray(int... val) {
@@ -67,6 +70,21 @@ public class ArrayUtility {
 		
 		return sb.toString();
 	}
+
+	public static List<List<Integer>> int2DArrauyToList(int [][] arr) {
+		List<List<Integer>> result = new ArrayList<>();
+
+		if(arr.length == 0) {
+			result.add(new ArrayList<>());
+			return result;
+		}
+
+		for(int i=0; i<arr.length; i++) {
+			List<Integer> row = Arrays.stream(arr[i]).boxed().collect(Collectors.toList());
+			result.add(row);
+		}
+		return result;
+	}
 	
 	public static void main(String[] args) {
 		System.out.println(ArrayUtility.int1DArrayToString(ArrayUtility.toIntArray()));
@@ -76,6 +94,7 @@ public class ArrayUtility {
 		
 		int[][] testArr = {{1, 2, 3}, {1, -222, 3}, {1, 2, 333}};
 		System.out.println(ArrayUtility.int2DArrayToString(testArr));
+		System.out.println(ArrayUtility.int2DArrauyToList(testArr));
 		
 		System.out.println(ArrayUtility.int1DArrayToString(ArrayUtility.integerListToIntArray(Arrays.asList(1, -222, 3))));		
 	}
