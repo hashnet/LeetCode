@@ -5,7 +5,7 @@ import java.util.Queue;
 
 public class TreeUtility {
 	public static TreeNode createTree(String str) {
-		str = str.replaceAll("[\\s(){}]", "");
+		str = str.replaceAll("[\\s(){}\\[\\]]", "");
 
 		String[] values = str.split(",");
 		TreeNode[] nodes = new TreeNode[values.length];
@@ -63,5 +63,7 @@ public class TreeUtility {
 	public static void main(String[] args) {
 		TreeNode root = createTree("3,5,1,6,2,0,8,null,null,7,4");
 		System.out.println(treeToString(root));
+
+		System.out.println(treeToString(createTree("[3,5,1,6,2,0,8,null,null,7,4]")));
 	}
 }

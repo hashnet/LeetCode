@@ -2,7 +2,7 @@ package com.hashnet.leetcode.utility;
 
 public class LinkedListUtility {
 	public static ListNode createList(String str) {
-		str = str.replaceAll("[\\s(){}]", "");
+		str = str.replaceAll("[\\s(){}\\[\\]]", "");
 
 		String[] values = str.split("->");
 
