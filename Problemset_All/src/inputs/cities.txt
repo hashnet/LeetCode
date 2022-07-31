@@ -1,5 +1,0 @@
-3
-Los Angeles,Denver
-Chicago,New York
-Denver,Chicago
-Los Angeles,New York
