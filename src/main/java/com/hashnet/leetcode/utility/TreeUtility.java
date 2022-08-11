@@ -14,7 +14,7 @@ public class TreeUtility {
         for (int i = 0; i < values.length; i++) {
 
             TreeNode node;
-            if (values[i].equals("null")) node = null;
+            if (values[i].equals("null") || values[i].isEmpty()) node = null;
             else {
                 int value = Integer.parseInt(values[i]);
                 node = new TreeNode(value);
