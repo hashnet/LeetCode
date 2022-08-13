@@ -8,18 +8,18 @@ class Kth_Smallest_Element_in_a_BST {
     public int kthSmallest(TreeNode root, int k) {
         return inorder(root, k);
     }
-    
+
     private static int counter = 0;
-    
+
     private int inorder(TreeNode node, int k) {
         int num = -1;
-        if(node.left != null && counter < k) num = inorder(node.left, k);
-        if(node != null && counter < k) {
+        if (node.left != null && counter < k) num = inorder(node.left, k);
+        if (node != null && counter < k) {
             num = node.val;
             ++counter;
         }
-        if(node.right != null && counter < k) num = inorder(node.right, k);
-        
+        if (node.right != null && counter < k) num = inorder(node.right, k);
+
         return num;
     }
 

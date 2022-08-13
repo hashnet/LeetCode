@@ -3,11 +3,11 @@ package com.hashnet.leetcode.problemsetall;
 public class Reverse_String_II {
     public String reverseStr(String s, int k) {
         char[] ca = s.toCharArray();
-        for(int i=0; i<s.length(); i+=(2*k)) {
-            if(i+k-1 >= s.length()) {
-                reverse(ca, i, s.length()-1);
+        for (int i = 0; i < s.length(); i += (2 * k)) {
+            if (i + k - 1 >= s.length()) {
+                reverse(ca, i, s.length() - 1);
             } else {
-                reverse(ca, i, i+k-1);
+                reverse(ca, i, i + k - 1);
             }
         }
 
@@ -15,7 +15,7 @@ public class Reverse_String_II {
     }
 
     private void reverse(char[] ca, int i, int j) {
-        while(i<j) {
+        while (i < j) {
             char temp = ca[i];
             ca[i] = ca[j];
             ca[j] = temp;

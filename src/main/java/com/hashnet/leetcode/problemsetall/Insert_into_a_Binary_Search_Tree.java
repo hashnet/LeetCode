@@ -9,14 +9,14 @@ public class Insert_into_a_Binary_Search_Tree {
             return new TreeNode(val);
         }
 
-        if(val < root.val) {
-            if(root.left == null) {
+        if (val < root.val) {
+            if (root.left == null) {
                 root.left = new TreeNode(val);
             } else {
                 insertIntoBST(root.left, val);
             }
         } else {
-            if(root.right == null) {
+            if (root.right == null) {
                 root.right = new TreeNode(val);
             } else {
                 insertIntoBST(root.right, val);

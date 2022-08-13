@@ -33,14 +33,14 @@ public class Maximum_Profit_in_Job_Scheduling {
 
         Collections.sort(jobs, Comparator.comparing(j -> j.endTime));
 
-        for(int i=1; i<len; i++) {
+        for (int i = 1; i < len; i++) {
             Job thisJob = jobs.get(i);
             int maxProfitUptoThis = thisJob.profit;
 
 
-            for (int j=i-1; j>=0; j--) {
-                Job prevJob  = jobs.get(j);
-                if(prevJob.endTime <= thisJob.startTime) {
+            for (int j = i - 1; j >= 0; j--) {
+                Job prevJob = jobs.get(j);
+                if (prevJob.endTime <= thisJob.startTime) {
                     maxProfitUptoThis = Math.max(maxProfitUptoThis, prevJob.profit + thisJob.profit);
                     break;
                 } else {
@@ -51,7 +51,7 @@ public class Maximum_Profit_in_Job_Scheduling {
             thisJob.profit = maxProfitUptoThis;
         }
 
-        return jobs.get(len-1).profit;
+        return jobs.get(len - 1).profit;
     }
 
 
@@ -69,7 +69,7 @@ public class Maximum_Profit_in_Job_Scheduling {
         result = new HashMap<>();
 
         int maxProfit = 0;
-        for(Job job: jobs) {
+        for (Job job : jobs) {
             int currentProfit = getProfitUpto(job.endTime);
             currentProfit = Math.max(currentProfit, getProfitUpto(job.startTime) + job.profit);
             maxProfit = Math.max(maxProfit, currentProfit);
@@ -93,7 +93,7 @@ public class Maximum_Profit_in_Job_Scheduling {
             throw new AssertionError();
         if (solution.jobScheduling(new int[]{1, 2, 3, 4, 6}, new int[]{3, 5, 10, 6, 9}, new int[]{20, 20, 100, 70, 60}) != 150)
             throw new AssertionError();
-        if (solution.jobScheduling(new int[]{24,24,7,2,1,13,6,14,18,24}, new int[]{27,27,20,7,14,22,20,24,19,27}, new int[]{6,1,4,2,3,6,5,6,9,8}) != 20)
+        if (solution.jobScheduling(new int[]{24, 24, 7, 2, 1, 13, 6, 14, 18, 24}, new int[]{27, 27, 20, 7, 14, 22, 20, 24, 19, 27}, new int[]{6, 1, 4, 2, 3, 6, 5, 6, 9, 8}) != 20)
             throw new AssertionError();
     }
 

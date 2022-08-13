@@ -14,15 +14,15 @@ public class Combination_Sum2 {
     }
 
     private void recurse(int index, int[] candidates, int target, Deque<Integer> currList, List<List<Integer>> result) {
-        if(target < 0) return;
+        if (target < 0) return;
 
-        if(target == 0) result.add(new ArrayList<>(currList));
+        if (target == 0) result.add(new ArrayList<>(currList));
 
-        for(int i=index; i<candidates.length; i++) {
+        for (int i = index; i < candidates.length; i++) {
             if (candidates[i] > target) break;
 
             currList.push(candidates[i]);
-            recurse(i, candidates, target-candidates[i], currList, result);
+            recurse(i, candidates, target - candidates[i], currList, result);
             currList.pop();
         }
     }
@@ -31,6 +31,6 @@ public class Combination_Sum2 {
         Combination_Sum2 solution = new Combination_Sum2();
 
         System.out.println(solution.combinationSum(new int[]{2, 3, 6, 7}, 7));
-        System.out.println(solution.combinationSum(new int[]{2,3,5}, 8));
+        System.out.println(solution.combinationSum(new int[]{2, 3, 5}, 8));
     }
 }

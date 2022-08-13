@@ -17,18 +17,18 @@ public class Combination_Sum {
     }
 
     private void recurse(int pos, int[] candidates, int target, int currSum, Deque<Integer> stack) {
-        for(int i=pos; i<candidates.length; i++) {
+        for (int i = pos; i < candidates.length; i++) {
             int sum = currSum + candidates[i];
 
-            if(sum > target) break;
+            if (sum > target) break;
 
-            if(sum == target) {
+            if (sum == target) {
                 stack.push(candidates[i]);
                 result.add(new ArrayList<>(stack));
                 stack.pop();
             }
 
-            if(sum < target) {
+            if (sum < target) {
                 stack.push(candidates[i]);
                 recurse(i, candidates, target, sum, stack);
                 stack.pop();
@@ -40,6 +40,6 @@ public class Combination_Sum {
         Combination_Sum solution = new Combination_Sum();
 
         System.out.println(solution.combinationSum(new int[]{2, 3, 6, 7}, 7));
-        System.out.println(solution.combinationSum(new int[]{2,3,5}, 8));
+        System.out.println(solution.combinationSum(new int[]{2, 3, 5}, 8));
     }
 }

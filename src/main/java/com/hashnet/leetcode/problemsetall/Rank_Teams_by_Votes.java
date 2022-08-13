@@ -1,8 +1,8 @@
 package com.hashnet.leetcode.problemsetall;
 
-import com.hashnet.leetcode.utility.ArrayUtility;
-
-import java.util.*;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Rank_Teams_by_Votes {
@@ -41,10 +41,10 @@ public class Rank_Teams_by_Votes {
         Map<Character, Candidate> candidateMap = new HashMap<>();
 
         Arrays.stream(votes).forEach(vote -> {
-            for(int i=0; i<vote.length(); i++) {
+            for (int i = 0; i < vote.length(); i++) {
                 char c = vote.charAt(i);
 
-                if(!candidateMap.containsKey(c)) {
+                if (!candidateMap.containsKey(c)) {
                     candidateMap.put(c, new Candidate(c, castCount));
                 }
 

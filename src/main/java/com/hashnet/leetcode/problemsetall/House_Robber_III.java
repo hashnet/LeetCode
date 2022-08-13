@@ -10,13 +10,13 @@ public class House_Robber_III {
     Map<TreeNode, Integer[]> memo = new HashMap<>();
 
     public int rob(TreeNode root) {
-        Integer[] result  = DP(root);
+        Integer[] result = DP(root);
         return Math.max(result[0], result[1]);
     }
 
-    private Integer[]  DP(TreeNode node) {
+    private Integer[] DP(TreeNode node) {
         if (node == null) {
-            return new Integer[] {0, 0};
+            return new Integer[]{0, 0};
         }
 
         if (memo.containsKey(node)) {

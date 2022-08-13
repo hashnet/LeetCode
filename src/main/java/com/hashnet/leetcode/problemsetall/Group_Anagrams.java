@@ -7,13 +7,13 @@ public class Group_Anagrams {
         List<List<String>> res = new ArrayList<>();
         Map<String, List<String>> map = new HashMap<>();
 
-        for(String str : strs) {
+        for (String str : strs) {
             char[] chArr = str.toCharArray();
             Arrays.sort(chArr);
             String sortedStr = String.valueOf(chArr);
 
             List<String> list = map.get(sortedStr);
-            if(list == null) {
+            if (list == null) {
                 List<String> newList = new ArrayList<>();
                 newList.add(str);
 
@@ -30,6 +30,6 @@ public class Group_Anagrams {
     public static void main(String[] args) {
         Group_Anagrams solution = new Group_Anagrams();
 
-        System.out.println(solution.groupAnagrams(new String[] {"eat", "tea", "tan", "ate", "nat", "bat"}));
+        System.out.println(solution.groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"}));
     }
 }

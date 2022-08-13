@@ -8,9 +8,9 @@ public class Smallest_Integer_Not_Occuring_in_A {
 
         Arrays.sort(A);
 
-        for(int i : A) {
-            if(i == max) ++max;
-            else if(i < max) continue;
+        for (int i : A) {
+            if (i == max) ++max;
+            else if (i < max) continue;
             else return max;
         }
 

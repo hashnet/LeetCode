@@ -5,14 +5,14 @@ public class GetStringReplacingString {
         int lenS = S.length();
         int lenT = T.length();
 
-        if(Math.abs(lenS - lenT) > 1) {
+        if (Math.abs(lenS - lenT) > 1) {
             return "IMPOSSIBLE";
         }
 
-        if(lenS == lenT) {
-            for(int i=0; i<lenS; i++) {
-                if(S.charAt(i) != T.charAt(i)) {
-                    if(isMatchWithMove(S, i+1, T, i, S.charAt(i))) {
+        if (lenS == lenT) {
+            for (int i = 0; i < lenS; i++) {
+                if (S.charAt(i) != T.charAt(i)) {
+                    if (isMatchWithMove(S, i + 1, T, i, S.charAt(i))) {
                         return "MOVE " + S.charAt(i);
                     } else {
                         return "IMPOSSIBLE";
@@ -22,17 +22,17 @@ public class GetStringReplacingString {
 
             return "NOTHING";
         } else {
-            if(lenS > lenT) {
+            if (lenS > lenT) {
                 Object[] result = isMatchByDel(S, T);
-                if((boolean)result[0]) {
-                    return "REMOVE " + (char)result[1];
+                if ((boolean) result[0]) {
+                    return "REMOVE " + (char) result[1];
                 } else {
                     return "IMPOSSIBLE";
                 }
             } else {
                 Object[] result = isMatchByDel(T, S);
-                if((boolean)result[0]) {
-                    return "INSERT " + (char)result[1];
+                if ((boolean) result[0]) {
+                    return "INSERT " + (char) result[1];
                 } else {
                     return "IMPOSSIBLE";
                 }
@@ -45,9 +45,9 @@ public class GetStringReplacingString {
         char del = '0';
         int unMatch = 0;
 
-        while(ti < T.length()) {
-            if(S.charAt(si) != T.charAt(ti)) {
-                if(unMatch > 0) return new Object[] {false, '0'};
+        while (ti < T.length()) {
+            if (S.charAt(si) != T.charAt(ti)) {
+                if (unMatch > 0) return new Object[]{false, '0'};
                 else {
                     del = S.charAt(si);
                     ++unMatch;
@@ -59,34 +59,34 @@ public class GetStringReplacingString {
             }
         }
 
-        if(unMatch == 0) {
-            return new Object[]{true, S.charAt(S.length()-1)};
+        if (unMatch == 0) {
+            return new Object[]{true, S.charAt(S.length() - 1)};
         } else {
             return new Object[]{true, del};
         }
     }
 
     private boolean isMatchWithMove(String S, int si, String T, int ti, char c) {
-        if(si >= S.length()) {
+        if (si >= S.length()) {
             return false;
         }
 
         boolean moved = false;
-        while(ti < T.length()) {
-            if(si >= S.length()) {
-                si = S.length()-1;
+        while (ti < T.length()) {
+            if (si >= S.length()) {
+                si = S.length() - 1;
             }
 
-            if(S.charAt(si) != T.charAt(ti)) {
-                if(moved) {
+            if (S.charAt(si) != T.charAt(ti)) {
+                if (moved) {
                     return false;
-                } else if(T.charAt(ti) == c){
+                } else if (T.charAt(ti) == c) {
                     moved = true;
                     ++ti;
                 } else {
                     return false;
                 }
-            }else {
+            } else {
                 ++si;
                 ++ti;
             }
