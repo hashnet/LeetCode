@@ -1,6 +1,6 @@
 package com.hashnet.leetcode.problemsetall;
 
-import com.hashnet.leetcode.utility.ListUtility;
+import com.hashnet.leetcode.utility.PrintUtility;
 import com.hashnet.leetcode.utility.TreeNode;
 import com.hashnet.leetcode.utility.TreeUtility;
 
@@ -42,8 +42,8 @@ public class Binary_Tree_Level_Order_Traversal {
     public static void main(String[] args) {
         Binary_Tree_Level_Order_Traversal solution = new Binary_Tree_Level_Order_Traversal();
 
-        System.out.println(ListUtility.prettyPrint(solution.levelOrder(TreeUtility.createTree("[3,9,20,null,null,15,7]"))));
-        System.out.println(ListUtility.prettyPrint(solution.levelOrder(TreeUtility.createTree("[1]"))));
-        System.out.println(ListUtility.prettyPrint(solution.levelOrder(TreeUtility.createTree("[]"))));
+        System.out.println(PrintUtility.prettyPrint(solution.levelOrder(TreeUtility.createTree("[3,9,20,null,null,15,7]"))));
+        System.out.println(PrintUtility.prettyPrint(solution.levelOrder(TreeUtility.createTree("[1]"))));
+        System.out.println(PrintUtility.prettyPrint(solution.levelOrder(TreeUtility.createTree("[]"))));
     }
 }

@@ -7,16 +7,16 @@ import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-public class ListUtility {
+public class PrintUtility {
 
     public static String prettyPrint(Object objects) {
         if (objects instanceof Set) {
             return ((Set<Object>) objects).stream()
-                .map(ListUtility::prettyPrint)
+                .map(PrintUtility::prettyPrint)
                 .collect(Collectors.joining(",", "(", ")"));
         } else if (objects instanceof Collection) {
             return (String) ((Collection) objects).stream()
-                .map(ListUtility::prettyPrint)
+                .map(PrintUtility::prettyPrint)
                 .collect(Collectors.joining(",", "[", "]"));
         } else if (objects instanceof Map) {
             return ((Map<Object, Object>) objects).entrySet()

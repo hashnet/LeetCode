@@ -1,11 +1,10 @@
 package com.hashnet.leetcode.problemsetall;
 
 import com.hashnet.leetcode.utility.ArrayUtility;
-import com.hashnet.leetcode.utility.ListUtility;
+import com.hashnet.leetcode.utility.PrintUtility;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,8 +45,8 @@ public class Permutations {
     public static void main(String[] args) {
         Permutations solution = new Permutations();
 
-        System.out.println(ListUtility.prettyPrint(solution.permute(ArrayUtility.toIntArray(1,2,3))));
-        System.out.println(ListUtility.prettyPrint(solution.permute(ArrayUtility.toIntArray(0,1))));
-        System.out.println(ListUtility.prettyPrint(solution.permute(ArrayUtility.toIntArray(1))));
+        System.out.println(PrintUtility.prettyPrint(solution.permute(ArrayUtility.toIntArray(1,2,3))));
+        System.out.println(PrintUtility.prettyPrint(solution.permute(ArrayUtility.toIntArray(0,1))));
+        System.out.println(PrintUtility.prettyPrint(solution.permute(ArrayUtility.toIntArray(1))));
     }
 }
