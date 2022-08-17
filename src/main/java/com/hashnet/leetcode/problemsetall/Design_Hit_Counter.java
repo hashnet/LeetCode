@@ -2,11 +2,10 @@ package com.hashnet.leetcode.problemsetall;
 
 import java.util.ArrayDeque;
 import java.util.Queue;
-import java.util.concurrent.atomic.AtomicInteger;
 
 public class Design_Hit_Counter {
     private static class HitCounter {
-        private Queue<Integer> queue;
+        private final Queue<Integer> queue;
 
         public HitCounter() {
             queue = new ArrayDeque<>();
