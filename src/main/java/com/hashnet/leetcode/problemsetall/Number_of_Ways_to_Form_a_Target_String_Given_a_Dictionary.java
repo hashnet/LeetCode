@@ -1,6 +1,7 @@
 package com.hashnet.leetcode.problemsetall;
 
 import com.hashnet.leetcode.utility.PrintUtility;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -15,18 +16,13 @@ public class Number_of_Ways_to_Form_a_Target_String_Given_a_Dictionary {
         return dp(words[0].length() - 1, target.length() - 1, words, target, countMaps);
     }
 
-    public int dp(int dictIndex, int targetIndex, String[] words, String target,
-        List<Map<Character, Integer>> countMaps) {
-        int multiplier = countMaps.get(dictIndex).getOrDefault(target.charAt(targetIndex), 0);
-        if (targetIndex == 0) {
-            return multiplier;
-        } else {
-            int sum = 0;
-            for (int i = dictIndex; i >= targetIndex; i--) {
-                sum += dp(i - 1, targetIndex - 1, words, target, countMaps);
-            }
-            return sum * multiplier;
+    public int dp(int dictIndex, int targetIndex, String[] words, String target, List<Map<Character, Integer>> countMaps) {
+        int sum = 0;
+        for (int i = dictIndex; i >= targetIndex; i--) {
+            sum += countMaps.get(i).getOrDefault(target.charAt(targetIndex), 0) * (targetIndex == 0 ? 1 : dp(i - 1, targetIndex - 1, words, target, countMaps));
         }
+
+        return sum;
     }
 
     private List<Map<Character, Integer>> buildCountMaps(String[] words) {
